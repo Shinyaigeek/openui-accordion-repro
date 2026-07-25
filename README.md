@@ -75,6 +75,14 @@ latched prefix matches no item, and the accordion ends up with **no** section
 open (items are not filtered for complete values, unlike `Tabs`, which filters
 `value != null`).
 
+## After the fix
+
+With the fix from [thesysdev/openui#862](https://github.com/thesysdev/openui/pull/862)
+(verified here with a local build of that branch), the first section is open on
+mount and streaming follow-along still works:
+
+![screenshot: Apple section open on mount after the fix](./after-fix.png)
+
 ## Suggested fix
 
 Skip the auto-open pass on the baseline render (e.g. initialize
