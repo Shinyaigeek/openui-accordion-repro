@@ -30,6 +30,19 @@
         font-size: 13px;
         overflow-x: auto;
       }
+      /* The OpenUI stylesheet switches its text tokens to light colors under
+         @media (prefers-color-scheme: dark), so the page chrome must follow
+         the OS scheme too or the accordion text becomes invisible. */
+      @media (prefers-color-scheme: dark) {
+        body {
+          background: #161618;
+          color: #e8e8ea;
+        }
+        .panel {
+          background: #232326;
+          border-color: #3a3a3e;
+        }
+      }
     </style>
   </head>
   <body>
